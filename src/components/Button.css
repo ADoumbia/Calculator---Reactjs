@@ -1,0 +1,18 @@
+/* Setting up the properties for the regular and operator buttons */
+
+.button{
+    display: flex;
+    height: 4em;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    font-size: 1.4em;
+    background-color: #e0e1e6;
+    color: #888;
+    outline: 1px solid rgb(0, 0, 0);
+}
+.operator{
+    background-color: deepskyblue;
+    color: #fff;
+}

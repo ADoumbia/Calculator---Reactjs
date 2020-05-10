@@ -1,0 +1,16 @@
+/* Setting up how our calculator input box appears*/
+.input{
+    display: flex;
+    height: 2em;
+    flex: 1;
+    background: linear-gradient(to right, #159DCF, #1531CF);
+    color: #fff;
+    justify-content: flex-end;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 4rem;
+    align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+   
+}
