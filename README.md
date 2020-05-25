@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+**Update 2020/25/5** - Converted to Scientific Calculator - New functions include:
+- Exponential Function
+- Trigonometric Functions
+- Square root function
+- Percentage function
+- Pi Button
+- Negative number button
+
 ## Available Scripts
 
 In the project directory, you can run:
