@@ -65,6 +65,59 @@ class App extends Component {
     this.setState.operator = "product";
 
   };
+
+  root = () => {
+    this.setState.previousNumber = this.state.input;
+    this.setState({ input: ""});
+    this.setState.operator = "root";
+
+  };
+
+  exponent = () => {
+    this.setState.previousNumber = this.state.input;
+    this.setState({ input: ""});
+    this.setState.operator = "exponent";
+
+  };
+
+  percent = () => {
+    this.setState.previousNumber = this.state.input;
+    this.setState({ input: ""});
+    this.setState.operator = "percent";
+
+  };
+
+  pi = val => {
+    this.setState({ input: 3.141592653589793});
+  };
+
+  negative = () => {
+    this.setState.previousNumber = this.state.input;
+    this.setState({ input: ""});
+    this.setState.operator = "negative";
+
+  };
+
+  sine = () => {
+    this.setState.previousNumber = this.state.input;
+    this.setState({ input: ""});
+    this.setState.operator = "sine";
+
+  };
+
+  cosine = () => {
+    this.setState.previousNumber = this.state.input;
+    this.setState({ input: ""});
+    this.setState.operator = "cosine";
+
+  };
+
+  tangent = () => {
+    this.setState.previousNumber = this.state.input;
+    this.setState({ input: ""});
+    this.setState.operator = "tangent";
+
+  };
  //The evaluate method first declares the current number as the input and implements if/else if statements that will perform specific operations if 
  //there is a matching string value "plus"/"minus"/"divide"/"product". Note this acts identically to a switch statement.
   evaluate = () =>{
@@ -86,10 +139,37 @@ class App extends Component {
       this.setState({
         input: parseFloat(this.setState.previousNumber) * parseFloat(this.setState.currentNumber)
       });
-    }
+    } else if (this.setState.operator === "root"){
+        this.setState({
+          input: Math.sqrt(parseFloat(this.setState.currentNumber))
+        });
+    } else if (this.setState.operator === "exponent"){
+      this.setState({
+        input: Math.pow(parseFloat(this.setState.previousNumber), parseFloat(this.setState.currentNumber))
+      });
+    } else if (this.setState.operator === "percent"){
+      this.setState({
+        input: parseFloat(this.setState.previousNumber)/100
+      });
+    } else if (this.setState.operator === "negative"){
+      this.setState({
+        input: -parseFloat(this.setState.currentNumber)
+      });
+    } else if (this.setState.operator === "sine"){
+      this.setState({
+        input: Math.sin(parseFloat(this.setState.currentNumber))
+      });
+    } else if (this.setState.operator === "cosine"){
+      this.setState({
+        input: Math.cos(parseFloat(this.setState.currentNumber))
+      });
+    } else if (this.setState.operator === "tangent"){
+      this.setState({
+        input: Math.tan(parseFloat(this.setState.currentNumber))
+      });
 
   };
-
+  }
   //The below render function creates our Application and calculator features (Buttons, Input) so that they appear in the webpage 
   //and can also be referred to by the components 
   render() {
@@ -105,24 +185,32 @@ class App extends Component {
         <Button handleClick={this.addToInput}>8</Button>
         <Button handleClick={this.addToInput}>9</Button>
         <Button handleClick={this.divide}>÷</Button>
+        <Button handleClick={this.root}>√</Button>
+        <Button handleClick={this.negative}>(-)</Button>   
     </div>
       <div className="row">
         <Button handleClick={this.addToInput}>4</Button>
         <Button handleClick={this.addToInput}>5</Button>
         <Button handleClick={this.addToInput}>6</Button>
         <Button handleClick={this.multiply}>×</Button>
+        <Button handleClick={this.exponent}>EXP</Button>
+        <Button handleClick={this.sine}>sin</Button>   
       </div>
       <div className="row">
         <Button handleClick={this.addToInput}>1</Button>
         <Button handleClick={this.addToInput}>2</Button>
         <Button handleClick={this.addToInput}>3</Button>
         <Button handleClick={this.add}>+</Button>
+        <Button handleClick={this.percent}>%</Button>
+        <Button handleClick={this.cosine}>cos</Button>   
       </div>
       <div className="row">
         <Button handleClick={this.addDecimal}>.</Button>
         <Button handleClick={this.addZeroToInput}>0</Button>
         <Button handleClick={this.evaluate}>=</Button>
-        <Button handleClick={this.subtract}>-</Button>  
+        <Button handleClick={this.subtract}>-</Button>
+        <Button handleClick={this.pi}>π</Button>
+        <Button handleClick={this.tangent}>tan</Button>      
        </div>
        <div className="row">
          <ClearButton handleClear={this.clearInput}>Clear</ClearButton>
