@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 **Update 2020/24/9**
-If you encounter any issues running the calculator please follow the below steps 
+- If you encounter any issues running the calculator please follow the below steps 
   1. Install Node.js - https://nodejs.org/en/
   2. If present, delete Package-lock.json
   3. Run the following commands: **npm install** followed by **npm start**
