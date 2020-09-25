@@ -1,13 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-**Update 2020/25/5** - Converted to Scientific Calculator - New functions include:
-- Exponential Function
-- Trigonometric Functions
-- Square root function
-- Percentage function
-- Pi Button
-- Negative number button
-
 **Update 2020/24/9**
 If you encounter any issues running the calculator please follow the below steps 
   1. Install Node.js - https://nodejs.org/en/
@@ -15,6 +7,14 @@ If you encounter any issues running the calculator please follow the below steps
   3. Run the following commands: **npm install** followed by **npm start**
  
  Happy coding! 
+ 
+**Update 2020/25/5** - Converted to Scientific Calculator - New functions include:
+- Exponential Function
+- Trigonometric Functions
+- Square root function
+- Percentage function
+- Pi Button
+- Negative number button
  
 ## Available Scripts
 
